@@ -171,9 +171,57 @@ article>h1 {
 }
 
 .solid {
-  border-width: 1px 0 0 0;
+  border-width: 2px 0 0 0;
 	border-style: solid;
   border-color: #bbb;
   right: 20px;
 }
 
+.Copyright {
+  color: #555;
+  font-family: sans-serif;
+  font-size: 6px;
+  text-align: center;
+  font-weight: lighter;
+}
+
+
+.container4 {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ccc;
+  margin: 12px;
+  border-radius: 8px;
+  padding: 0;
+}
+
+#item {
+  color: #fff;
+  font-size: 7px;
+  padding: 0px 15px;
+}
+
+#item::before {
+  content: "◯";
+  width: 10px;
+  height: 10px;
+  
+
+}
+
+.container5 {
+  margin: 12px;
+  text-align: right;
+  color: #444;
+}
+
+.container5 > h1 {
+  font-size: 13px;
+}
+
+.container5 > p {
+  font-size: 13.5px;
+  padding: 0;
+  margin: 2px 0px;
+  font-family: sans-serif;
+}
