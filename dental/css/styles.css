@@ -195,28 +195,34 @@ article>h1 {
   padding: 0;
 }
 
-#item {
-  color: #fff;
-  font-size: 7px;
-  padding: 0px 15px;
-}
-
-#item::before {
-  content: "◯";
-  width: 10px;
-  height: 10px;
-  
-
-}
 
 .container5 {
   margin: 12px;
   text-align: right;
   color: #444;
 }
+#item {
+  color: #fff;
+  font-size: 7px;
+  padding: 0px 13px;
+  position: relative;
+}
+
+#item::before {
+  content: "◯";
+  width: 12px;
+  height: 12px;
+  top: 13px;
+  position: absolute;
+}
+.menu_label {
+  padding-left: 15px;
+}
 
 .container5 > h1 {
   font-size: 13px;
+  font-family: sans-serif;
+  margin: 4px;
 }
 
 .container5 > p {
