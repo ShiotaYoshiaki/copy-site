@@ -1,0 +1,53 @@
+.game {
+  background-color: #d9fa96;
+  display: flex;
+  padding: 6px;
+}
+
+.text {
+  width: auto;
+  flex: auto;
+}
+
+#question {
+  font-size: 14px;
+}
+
+#answer {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.textbox {
+  display: flex;
+}
+
+.hint > h1 {
+  font-size: 14px;
+}
+
+.hint {
+  margin: 0;
+  padding: 2px auto auto 2px;
+  border: 1px solid black;
+  flex: auto;
+  border-radius: 8px;
+}
+
+.mistake > h1 {
+  font-size: 14px;
+}
+
+.mistake {
+  width: 140px;
+  height: 300px;
+  padding: 2px;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.HangMan {
+  width: 220px;
+  height: 420px;
+}
+
