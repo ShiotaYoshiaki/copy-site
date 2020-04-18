@@ -1,7 +1,12 @@
-.game {
+body {
+  margin: 0;
+}
+
+#game {
   background-color: #d9fa96;
   display: flex;
   padding: 6px;
+  transition: 0.4s;
 }
 
 .text {
@@ -10,7 +15,13 @@
 }
 
 #question {
+  margin: 0;
   font-size: 14px;
+}
+
+#inputAnswer {
+  margin-top: 6px;
+  width: 30px;
 }
 
 #answer {
@@ -47,7 +58,11 @@
 }
 
 .HangMan {
-  width: 220px;
+  width: 250px;
   height: 420px;
+}
+
+.hidden {
+  transform: translateY(-500px);
 }
 

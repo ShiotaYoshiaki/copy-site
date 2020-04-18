@@ -1,6 +1,17 @@
-.btn {
+body {
+  margin: 0;
+}
+
+#btn {
   font-size: 18px;
   margin: 10px;
   border-radius: 8px;
+}
+
+.btnOn {
   background-color: #935e4b;
+}
+
+.btnOff {
+  background-color: darkgray;
 }
