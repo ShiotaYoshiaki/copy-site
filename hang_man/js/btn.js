@@ -1,8 +1,8 @@
 'use strict'
 
 {
-  const btn = document.getElementById('btn');
-  const game = document.getElementById('game')
+  const BTN = document.getElementById('btn');
+  const GAME = document.getElementById('game')
   let count = 0;
   
   function btnOff(){
@@ -10,13 +10,13 @@
     btn.classList.add('btnOff');
     btn.classList.remove('btnOn');
   }
-
-
+  
   if(count===0){
-    btn.addEventListener('click', () => {
+    BTN.addEventListener('click', () => {
       btnOff();
-      btn.textContent('次の問題へ');
-      game.classList.remove('hidden')
+      BTN.textContent('次の問題へ');
+      import {removeHidden} from "game.js"
+      removeHidden();
     });
   }
   
