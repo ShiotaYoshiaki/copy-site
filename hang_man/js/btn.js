@@ -11,13 +11,14 @@
     btn.classList.remove('btnOn');
   }
   
-  if(count===0){
-    BTN.addEventListener('click', () => {
-      btnOff();
-      BTN.textContent('次の問題へ');
-      import {removeHidden} from "game.js"
+  import { removeHidden } from "game.js";
+  
+  BTN.addEventListener('click', () => {
+    btnOff();
+    if(count===0){
+      BTN.textContent = "次の問題へ";
       removeHidden();
-    });
-  }
+    }
+  });
   
 }

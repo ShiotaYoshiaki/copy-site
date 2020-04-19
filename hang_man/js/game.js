@@ -3,7 +3,7 @@
 {
   const GAME = document.getElementById('game');
 
-  export function removeHidden(){
+  export function removeHidden() {
     GAME.classList.remove('hidden');
   }
 }
