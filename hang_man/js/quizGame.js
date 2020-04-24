@@ -47,11 +47,11 @@ function setAnswer(i,char){//i番目の文字を表示する
   ANSWER.textContent = answerCopy;
 }
 
-function addHangMan(i){
+function addHangMan(i){//hangman追記
   HANG_MAN.src=HANG_MANS_SRC[i];
 }
 
-function judgment(char){
+function judgment(char){//回答を判定
   var correct = false;
   for(let i=0;i<CURRENT_QUIZ.a.length;i++){
     if(CURRENT_QUIZ.a.charAt(i)===char){
