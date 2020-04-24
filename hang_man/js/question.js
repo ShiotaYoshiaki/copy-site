@@ -22,6 +22,6 @@ function shuffle(arr) {
 
 
 export function serveOneQuiz(i){
-  return quizSet[i];
+  return quizSet[id];
 }
 

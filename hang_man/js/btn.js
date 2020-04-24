@@ -6,15 +6,15 @@ let count = 0;
 import { runningGame } from './quizGame.js';
 
 function btnOff(){//ボタンのスタイルをオフモードにする
-  btn.disabled = "true";
-  btn.classList.add('btnOff');
-  btn.classList.remove('btnOn');
+  BTN.disabled = "true";
+  BTN.classList.add('btnOff');
+  BTN.classList.remove('btnOn');
 }
 
-function btnOn(){//ボタンのスタイルをオンモードにする
-  btn.disabled = "false";
-  btn.classList.add('btnOn');
-  btn.classList.remove('btnOff');
+export function btnOn(){//ボタンのスタイルをオンモードにする
+  BTN.disabled = "false";
+  BTN.classList.add('btnOn');
+  BTN.classList.remove('btnOff');
 }
 
 function removeHidden(){//ゲーム画面を出力する
