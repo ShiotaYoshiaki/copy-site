@@ -23,32 +23,38 @@ export function runningGame (){
   setQuestion();
   setHint(mistakeCount);
   addHangMan(mistakeCount);
+  return;
 }
 
 function setQuestion() {//問題をセットする
   answerCopy = "_".repeat(CURRENT_QUIZ.a.length);
   ANSWER.textContent = answerCopy;
+  return;
 }
 
 function setHint(i) {//ヒントを追加する
   const NEW_HINT = document.createElement('li');
   NEW_HINT.textContent = CURRENT_QUIZ.h[i];
   HINT_LIST.appendChild(NEW_HINT);
+  return;
 }
 
 function setMistakeList(char) {//ヒントを追加する
   const NEW_MIS = document.createElement('li');
   NEW_MIS.textContent = char;
   MISTAKE_LIST.appendChild(NEW_MIS);
+  return;
 }
 
 function setAnswer(i,char){//i番目の文字を表示する
   answerCopy = answerCopy.substr(0,i) + char + answerCopy.substr(i+1,answerCopy.length-i);
   ANSWER.textContent = answerCopy;
+  return;
 }
 
 function addHangMan(i){//hangman追記
   HANG_MAN.src=HANG_MANS_SRC[i];
+  return;
 }
 
 function judgment(char){//回答を判定
