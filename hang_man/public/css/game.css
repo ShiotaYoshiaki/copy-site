@@ -2,22 +2,6 @@ body {
   margin: 0;
 }
 
-
-#btn {
-  font-size: 18px;
-  margin: 10px;
-  border-radius: 8px;
-}
-
-.btnOn {
-  background-color: #935e4b;
-}
-
-.btnOff {
-  background-color: darkgray;
-}
-
-
 #game {
   background-color: #d9fa96;
   display: flex;
@@ -39,20 +23,12 @@ body {
   font-size: 14px;
 }
 
-#inputBtn {
-  font-size: 15px;
-  margin: 2px;
-  border-radius: 8px;
-  background-color: burlywood;
-}
-
 #inputAnswer {
   margin-top: 6px;
   width: 30px;
 }
 
 #answer {
-  letter-spacing: 0.15em;
   font-size: 20px;
   font-weight: bold;
 }

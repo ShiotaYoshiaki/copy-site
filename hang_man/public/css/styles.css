@@ -9,6 +9,11 @@ body {
   height: 70px;
 }
 
+.iFrameBtn {
+  margin: 0px 10px;
+  height: 60px;
+}
+
 .iFrameGame {
   margin: 0;
   width: 100%;
