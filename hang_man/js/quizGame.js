@@ -14,13 +14,16 @@ let mistakeCount;
 let correctCount;
 let CURRENT_QUIZ;
 let answerCopy;
+let point = 0;
 
 
-export function runningGame (){
+export function initializationGame (){
   correctCount = 0;
   mistakeCount = 0;
   CURRENT_QUIZ = serveOneQuiz(questionCount);
   setQuestion();
+  clearHint();
+  clearMistake();
   setHint(mistakeCount);
   addHangMan(mistakeCount);
   return;
@@ -39,11 +42,23 @@ function setHint(i) {//ヒントを追加する
   return;
 }
 
-function setMistakeList(char) {//ヒントを追加する
+function setMistakeList(char) {//間違え文字を追加する
   const NEW_MIS = document.createElement('li');
   NEW_MIS.textContent = char;
   MISTAKE_LIST.appendChild(NEW_MIS);
   return;
+}
+
+function clearHint(){//ヒントリストを削除
+  while(HINT_LIST.hasChildNodes()){
+    HINT_LIST.removeChild(HINT_LIST.firstChild);
+  }
+}
+
+function clearMistake(){//間違え文字リストを削除
+  while(MISTAKE_LIST.hasChildNodes()){
+    MISTAKE_LIST.removeChild(MISTAKE_LIST.firstChild);
+  }
 }
 
 function setAnswer(i,char){//i番目の文字を表示する
@@ -57,6 +72,31 @@ function addHangMan(i){//hangman追記
   return;
 }
 
+function addPoint(i){
+  switch (i){
+    case 0:
+      return 10;
+    case 1:
+      return 7;
+    case 2:
+      return 5;
+    case 3:
+      return 4;
+    case 4:
+      return 3;
+    case 5:
+      return 2;
+    case 6:
+      return 1;
+  }
+}
+
+function resultAnnouncement(){
+  document.getElementById('arrivalQuestion').textContent = `${questionCount}問クリア`;
+  document.getElementById('quizPoint').textContent = `得点: ${point}点`;
+  document.getElementById('result').classList.remove('resultHidden');
+}
+
 function judgment(char){//回答を判定
   var correct = false;
   for(let i=0;i<CURRENT_QUIZ.a.length;i++){
@@ -67,12 +107,17 @@ function judgment(char){//回答を判定
     }
   }
   if(correct){
-    if(correctCount===CURRENT_QUIZ.a.length){
-
+    if(correctCount===CURRENT_QUIZ.a.length){//全て正解したとき
+      btnOn();
+      questionCount++;
+      point += addPoint(mistakeCount);
       return;
     }
   }else{
     mistakeCount++;
+    if(mistakeCount===7){//HangManが完成したとき
+      resultAnnouncement();
+    }
     setHint(mistakeCount);
     setMistakeList(char);
     addHangMan(mistakeCount);

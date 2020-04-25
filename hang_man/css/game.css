@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  position: relative;
 }
 
 
@@ -7,6 +8,7 @@ body {
   font-size: 18px;
   margin: 10px;
   border-radius: 8px;
+  transition: 0.4s;
 }
 
 .btnOn {
@@ -17,12 +19,18 @@ body {
   background-color: darkgray;
 }
 
+#btn.btnHidden{
+  transform: translateY(50px);
+  position: relative;
+  z-index: -1;
+}
 
 #game {
   background-color: #d9fa96;
   display: flex;
   padding: 6px;
   transition: 0.4s;
+  z-index: 1;
 }
 
 #game.hidden {
@@ -88,6 +96,11 @@ body {
 .HangMan {
   width: 250px;
   height: 420px;
+}
+
+#result {
+  position: absolute;
+  margin: 20px auto;
 }
 
 
