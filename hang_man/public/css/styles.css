@@ -1,21 +1,59 @@
-body {
-  margin: 0;
-  background-color: #ddca4d;
+/* PCのレスポンシブデザイン */
+@media (min-width: 1001px){
+  body {
+    margin: 0;
+    background-color: #ddca4d;
+  }
+  
+  .iFrameHeader{
+    width: 100%;
+    margin: 0;
+    height: 70px;
+  }
+  
+  .iFrameGame {
+    margin: 0;
+    width: 100%;
+    height: 550px;
+  }
 }
 
-.iFrameHeader{
-  width: 100%;
-  margin: 0;
-  height: 70px;
+/* タブレットのレスポンシブデザイン */
+@media (max-width: 1000px / min-width: 671px){
+  body {
+    margin: 0;
+    background-color: #ddca4d;
+  }
+  
+  .iFrameHeader{
+    width: 100%;
+    margin: 0;
+    height: 70px;
+  }
+  
+  .iFrameGame {
+    margin: 0;
+    width: 100%;
+    height: 550px;
+  }
 }
 
-.iFrameBtn {
-  margin: 0px 10px;
-  height: 60px;
-}
-
-.iFrameGame {
-  margin: 0;
-  width: 100%;
-  height: 550px;
+/* スマホのレスポンシブデザイン */
+@media (max-width: 670px){
+  body {
+    margin: 0;
+    background-color: #ddca4d;
+  }
+  
+  .iFrameHeader{
+    width: 100%;
+    margin: 0;
+    height: 70px;
+  }
+  
+  .iFrameGame {
+    margin: 0;
+    width: 100%;
+    height: 550px;
+  }
 }

@@ -1,5 +1,5 @@
 const ANSWER =document.getElementById('answer');
-let questionCount = 0;
+
 
 const quizSet = shuffle([
       {a: 'みるくぼーい', h: ['お笑いグループ', '吉本所属の2人組', '旧称"ジン・ウオッカ"', '一人は駒場孝', 'コーンフレーク', 'インディードのCM', '2019年M-1グランプリ優勝']},
@@ -12,16 +12,6 @@ const quizSet = shuffle([
       {a: 'ひらいけん', h: ['ソロ歌手', '身長183cm', 'サザンオールスターズの大ファン', 'ドラマ"仁"の主題歌', 'あいみょんとコラボ', '"POP STAR"', '"瞳をとじて"']},
     ]);
 
-function removeHidden() {//隠し要素を出現させる
-  GAME.classList.remove("hidden");
-}
-
-function btnOff(){//ボタン無効
-  btn.disabled = "true";
-  btn.classList.add('btnOff');
-  btn.classList.remove('btnOn');
-}
-
 function shuffle(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -31,20 +21,7 @@ function shuffle(arr) {
 }
 
 
-function setQuestion() {
-  ANSWER.textContent = "_".repeat(quizSet[questionCount].a.length);
+export function serveOneQuiz(i){
+  return quizSet[i];
 }
-
-
-
-
-
-BTN.addEventListener('click', () => {
-  btnOff();
-  if(questionCount===0){
-    BTN.textContent = "次の問題へ";
-    setQuestion();
-    removeHidden();
-  }
-});
 

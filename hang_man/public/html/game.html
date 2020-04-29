@@ -3,30 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>人物・グループ名当てゲーム - Hang man -</title>
   <link rel="stylesheet" href="../css/game.css">
 </head>
 <body>
+  <button class="btnOn" id="btn">ゲームを始める</button>
   <section id="game" class="hidden">
     <section class="text">
       <h1 id="question">何の名前が隠れているでしょう？</h1>
       <h1 id="question">一文字ずつ入力してね！</h1>
-      <label>解答欄<input type="text" name="ans" id="inputAnswer"></label>
-      <p id="answer">ミルクボーイ</p>
+      <label>解答欄<input type="text" name="ans" id="inputAnswer"><button id="inputBtn">解答する</button></label>
+      <p id="answer"></p>
       <section class="textbox">
         <div class="hint">
-        <h1>ヒント</h1>
+          <ul id="hintList" title="ヒント"></ul>
         </div>
         <div class="mistake">
-          <h1>間違えた文字</h1>
+          <ul id="mistakeList" title="間違えた文字"></ul>
         </div>
       </section>
     </section>
     <section class="HangMan">
       <h1>Hang man</h1>
-      <img src="../images/h2.png" alt="" width="250" height="300">
+      <img src="../images/h2.png" alt="" width="250" height="300" id="hangMan">
     </section>
   </section>
-  <script type="module" src="../js/game.js"></script>
+  <div class="resultHidden" id="result">
+    <h1 id="gameOver">GAME OVER</h1>
+    <p id="arrivalQuestion"></p>
+    <p id="quizPoint"></p>
+  </div>
+  <script type="module" src="../js/btn.js"></script>
   <script type="module" src="../js/question.js"></script>
+  <script type="module" src="../js/quizGame.js"></script>
 </body>

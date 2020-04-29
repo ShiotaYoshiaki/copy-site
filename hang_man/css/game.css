@@ -1,106 +1,392 @@
-body {
-  margin: 0;
-  position: relative;
+/* PCのレスポンシブデザイン */
+@media (min-width: 1001px){
+  body {
+    margin: 0;
+  }
+  
+  
+  #btn {
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: 0.4s;
+  }
+  
+  .btnOn {
+    background-color: #935e4b;
+  }
+  
+  .btnOff {
+    background-color: darkgray;
+  }
+  
+  #btn.btnHidden{
+    transform: translateY(50px);
+    position: relative;
+    z-index: -1;
+  }
+  
+  #game {
+    background-color: #d9fa96;
+    display: flex;
+    padding: 6px;
+    transition: 0.4s;
+    z-index: 1;
+  }
+  
+  #game.hidden {
+    transform: translateY(-500px);
+  }
+  
+  .text {
+    width: auto;
+    flex: auto;
+  }
+  
+  #question {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  #inputBtn {
+    font-size: 15px;
+    margin: 2px;
+    border-radius: 8px;
+    background-color: burlywood;
+  }
+  
+  #inputAnswer {
+    margin-top: 6px;
+    width: 30px;
+  }
+  
+  #answer {
+    letter-spacing: 0.15em;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .textbox {
+    display: flex;
+  }
+  
+  .hint {
+    margin: 0;
+    padding: 2px auto auto 2px;
+    border: 1px solid black;
+    flex: auto;
+    border-radius: 8px;
+  }
+  
+  .mistake {
+    width: 70px;
+    height: 300px;
+    padding: 2px;
+    border: 1px solid black;
+    border-radius: 8px;
+  }
+  
+  .HangMan {
+    width: 250px;
+    height: 300px;
+  }
+  
+  #result {
+    background-color: aqua;
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    position: absolute;
+    top: 125px;
+    right: 256px;
+  }
+}
+
+/* タブレットのレスポンシブデザイン */
+@media (max-width: 671px / min-width: 1000px){
+  body {
+    margin: 0;
+  }
+  
+  
+  #btn {
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: 0.4s;
+  }
+  
+  .btnOn {
+    background-color: #935e4b;
+  }
+  
+  .btnOff {
+    background-color: darkgray;
+  }
+  
+  #btn.btnHidden{
+    transform: translateY(50px);
+    position: relative;
+    z-index: -1;
+  }
+  
+  #game {
+    background-color: #d9fa96;
+    display: flex;
+    padding: 6px;
+    transition: 0.4s;
+    z-index: 1;
+  }
+  
+  #game.hidden {
+    transform: translateY(-500px);
+  }
+  
+  .text {
+    width: auto;
+    flex: auto;
+  }
+  
+  #question {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  #inputBtn {
+    font-size: 15px;
+    margin: 2px;
+    border-radius: 8px;
+    background-color: burlywood;
+  }
+  
+  #inputAnswer {
+    margin-top: 6px;
+    width: 30px;
+  }
+  
+  #answer {
+    letter-spacing: 0.15em;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .textbox {
+    display: flex;
+  }
+  
+  .hint {
+    margin: 0;
+    padding: 2px auto auto 2px;
+    border: 1px solid black;
+    flex: auto;
+    border-radius: 8px;
+  }
+  
+  .mistake {
+    width: 70px;
+    height: 300px;
+    padding: 2px;
+    border: 1px solid black;
+    border-radius: 8px;
+  }
+  
+  .HangMan {
+    width: 250px;
+    height: 300px;
+  }
+  
+  #result {
+    background-color: aqua;
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    position: absolute;
+    top: 125px;
+    right: 256px;
+  }
+}
+
+/* スマホのレスポンシブデザイン */
+@media (max-width: 670px){
+  body {
+    margin: 0;
+  }
+  
+  
+  #btn {
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 8px;
+    transition: 0.4s;
+  }
+  
+  .btnOn {
+    background-color: #935e4b;
+  }
+  
+  .btnOff {
+    background-color: darkgray;
+  }
+  
+  #btn.btnHidden{
+    transform: translateY(50px);
+    position: relative;
+    z-index: -1;
+  }
+  
+  #game {
+    background-color: #d9fa96;
+    display: flex;
+    padding: 6px;
+    transition: 0.4s;
+    z-index: 1;
+  }
+  
+  #game.hidden {
+    transform: translateY(-500px);
+  }
+  
+  .text {
+    width: auto;
+    flex: auto;
+  }
+  
+  #question {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  #inputBtn {
+    font-size: 15px;
+    margin: 2px;
+    border-radius: 8px;
+    background-color: burlywood;
+  }
+  
+  #inputAnswer {
+    margin-top: 6px;
+    width: 30px;
+  }
+  
+  #answer {
+    letter-spacing: 0.15em;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .textbox {
+    display: flex;
+  }
+  
+  .hint {
+    margin: 0;
+    padding: 2px auto auto 2px;
+    flex: auto;
+    border-radius: 8px;
+  }
+  
+  #hintList{
+    position: relative;
+    padding: 0 0.5em;
+    margin-top: 2em;
+    list-style-type: none;
+    border: solid 2px #00796B;
+  }
+  
+  #hintList::after{
+    position: absolute;
+    content:attr(title);
+    padding: 1px 7px;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    font-size: .8em;
+    background: #00796B;
+    color: #fff;
+    bottom: 100%;
+    left: -2px;
+    border-radius: 4px 4px 0px 0px;
+  }
+  
+  #hintList li{
+    line-height: 1.5;
+    padding: 0.5em 0 0.5em 1.4em;
+    border-bottom: 1px dashed #4DB6AC;
+  }
+  
+  #hintList li::before {
+    position: absolute;
+    content: "\002713";
+    color: #00796B;
+    font-weight: bold;
+    left : 0.5em;
+  }
+  
+  #hintList li:last-of-type {
+    border-bottom: none;
+  }
+  
+  .mistake {
+    width: 70px;
+    height: 300px;
+    padding: 2px;
+    border-radius: 8px;
+  }
+  
+  #mistakeList{
+    position: relative;
+    padding: 0 0.5em;
+    margin-top: 2em;
+    list-style-type: none;
+    border: solid 2px #00796B;
+  }
+  
+  #mistakeList::after{
+    position: absolute;
+    content:attr(title);
+    padding: 1px 7px;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    font-size: .8em;
+    background: #00796B;
+    color: #fff;
+    bottom: 100%;
+    left: -2px;
+    border-radius: 4px 4px 0px 0px;
+  }
+  
+  #mistakeList li{
+    line-height: 1.5;
+    padding: 0.5em 0 0.5em 1.4em;
+    border-bottom: 1px dashed #4DB6AC;
+  }
+  
+  #mistakeList li::before {
+    position: absolute;
+    content: "\002713";
+    color: #00796B;
+    font-weight: bold;
+    left : 0.5em;
+  }
+  
+  #mistakeList li:last-of-type {
+    border-bottom: none;
+  }
+  .HangMan {
+    width: 250px;
+    height: 300px;
+  }
+  
+  /* #result {
+    background-color: aqua;
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    position: absolute;
+    top: 125px;
+    right: 256px;
+  } */
 }
 
 
-#btn {
-  font-size: 18px;
-  margin: 10px;
-  border-radius: 8px;
-  transition: 0.4s;
-}
-
-.btnOn {
-  background-color: #935e4b;
-}
-
-.btnOff {
-  background-color: darkgray;
-}
-
-#btn.btnHidden{
-  transform: translateY(50px);
-  position: relative;
-  z-index: -1;
-}
-
-#game {
-  background-color: #d9fa96;
-  display: flex;
-  padding: 6px;
-  transition: 0.4s;
-  z-index: 1;
-}
-
-#game.hidden {
-  transform: translateY(-500px);
-}
-
-.text {
-  width: auto;
-  flex: auto;
-}
-
-#question {
-  margin: 0;
-  font-size: 14px;
-}
-
-#inputBtn {
-  font-size: 15px;
-  margin: 2px;
-  border-radius: 8px;
-  background-color: burlywood;
-}
-
-#inputAnswer {
-  margin-top: 6px;
-  width: 30px;
-}
-
-#answer {
-  letter-spacing: 0.15em;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.textbox {
-  display: flex;
-}
-
-.hint > h1 {
-  font-size: 14px;
-}
-
-.hint {
-  margin: 0;
-  padding: 2px auto auto 2px;
-  border: 1px solid black;
-  flex: auto;
-  border-radius: 8px;
-}
-
-.mistake > h1 {
-  font-size: 14px;
-}
-
-.mistake {
-  width: 140px;
-  height: 300px;
-  padding: 2px;
-  border: 1px solid black;
-  border-radius: 8px;
-}
-
-.HangMan {
-  width: 250px;
-  height: 420px;
-}
-
-#result {
-  position: absolute;
-  margin: 20px auto;
-}
 
 
