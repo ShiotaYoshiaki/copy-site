@@ -1,11 +1,30 @@
-body {
-  margin: 0;
+/* PCとタブレットのレスポンシブデザイン */
+@media (min-width: 671px){
+  body {
+    margin: 0;
+  }
+  
+  .title {
+    margin: 0;
+    background-color: #84b23f;
+    padding: 6px;
+    font-size: 26px;
+    text-align: center;
+  }
 }
 
-.title {
-  margin: 0;
-  background-color: #84b23f;
-  padding: 6px;
-  font-size: 26px;
-  text-align: center;
+/* スマホのレスポンシブデザイン */
+@media (max-width: 670px){
+  body {
+    margin: 0;
+  }
+  
+  .title {
+    margin: 0;
+    background-color: #84b23f;
+    padding: 6px;
+    font-size: 11px;
+    text-align: center;
+  }
 }
+

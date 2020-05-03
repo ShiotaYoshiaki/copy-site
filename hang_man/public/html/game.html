@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html lang="jp">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/game.css">
-</head>
-<body>
-  <button class="btnOn" id="btn">ゲームを始める</button>
-  <section id="game" class="hidden">
-    <section class="text">
-      <h1 id="question">何の名前が隠れているでしょう？</h1>
-      <h1 id="question">一文字ずつ入力してね！</h1>
-      <label>解答欄<input type="text" name="ans" id="inputAnswer"><button id="inputBtn">解答する</button></label>
-      <p id="answer"></p>
-      <section class="textbox">
-        <div class="hint">
-          <ul id="hintList" title="ヒント"></ul>
-        </div>
-        <div class="mistake">
-          <ul id="mistakeList" title="間違えた文字"></ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/game.css" />
+  </head>
+  <body>
+    <button class="btnOn" id="btn">ゲームを始める</button>
+    <section id="game" class="hidden">
+      <section class="resultAndHangMan" id="resultHang">
+        <img
+          src="../images/h2.png"
+          alt=""
+          width="100%"
+          height="100%"
+          id="hangMan"
+        />
+        <div class="resultHidden" id="result">
+          <h1 id="gameOver">GAME OVER</h1>
+          <p id="arrivalQuestion"></p>
+          <p id="quizPoint"></p>
+          <p id="lastAnswer"></p>
         </div>
       </section>
+      <section class="text">
+        <h1 id="question">ヒントを見て誰の名前が隠れているでしょう？</h1>
+        <h1 id="question">一文字ずつ入力してね！</h1>
+        <label
+          >解答欄<input type="text" name="ans" id="inputAnswer" /><button
+            id="inputBtn"
+          >
+            解答する
+          </button></label
+        >
+        <p id="caution">※全角のひらがな、半角の英数字,記号,スペースを入力してね！
+        </p>
+        <p id="answer"></p>
+        <section class="textbox">
+          <div class="hint">
+            <ul id="hintList" title="ヒント"></ul>
+          </div>
+          <div class="mistake">
+            <ul id="mistakeList" title="間違えた文字"></ul>
+          </div>
+        </section>
+      </section>
     </section>
-    <section class="HangMan">
-      <h1>Hang man</h1>
-      <img src="../images/h2.png" alt="" width="250" height="300" id="hangMan">
-    </section>
-  </section>
-  <div class="resultHidden" id="result">
-    <h1 id="gameOver">GAME OVER</h1>
-    <p id="arrivalQuestion"></p>
-    <p id="quizPoint"></p>
-  </div>
-  <script type="module" src="../js/btn.js"></script>
-  <script type="module" src="../js/question.js"></script>
-  <script type="module" src="../js/quizGame.js"></script>
-</body>
+    <script type="module" src="../js/btn.js"></script>
+    <script type="module" src="../js/question.js"></script>
+    <script type="module" src="../js/quizGame.js"></script>
+  </body>
+</html>

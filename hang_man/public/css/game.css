@@ -1,392 +1,408 @@
-/* PCのレスポンシブデザイン */
-@media (min-width: 1001px){
+/* PCとタブレットのレスポンシブデザイン */
+@media (min-width: 671px) {
   body {
     margin: 0;
+    font-family: sans-serif;
   }
-  
-  
-  #btn {
-    font-size: 18px;
-    margin: 10px;
-    border-radius: 8px;
-    transition: 0.4s;
-  }
-  
-  .btnOn {
-    background-color: #935e4b;
-  }
-  
-  .btnOff {
-    background-color: darkgray;
-  }
-  
-  #btn.btnHidden{
-    transform: translateY(50px);
-    position: relative;
-    z-index: -1;
-  }
-  
-  #game {
-    background-color: #d9fa96;
-    display: flex;
-    padding: 6px;
-    transition: 0.4s;
-    z-index: 1;
-  }
-  
-  #game.hidden {
-    transform: translateY(-500px);
-  }
-  
-  .text {
-    width: auto;
-    flex: auto;
-  }
-  
-  #question {
-    margin: 0;
-    font-size: 14px;
-  }
-  
-  #inputBtn {
-    font-size: 15px;
-    margin: 2px;
-    border-radius: 8px;
-    background-color: burlywood;
-  }
-  
-  #inputAnswer {
-    margin-top: 6px;
-    width: 30px;
-  }
-  
-  #answer {
-    letter-spacing: 0.15em;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .textbox {
-    display: flex;
-  }
-  
-  .hint {
-    margin: 0;
-    padding: 2px auto auto 2px;
-    border: 1px solid black;
-    flex: auto;
-    border-radius: 8px;
-  }
-  
-  .mistake {
-    width: 70px;
-    height: 300px;
-    padding: 2px;
-    border: 1px solid black;
-    border-radius: 8px;
-  }
-  
-  .HangMan {
-    width: 250px;
-    height: 300px;
-  }
-  
-  #result {
-    background-color: aqua;
-    width: 400px;
-    height: 300px;
-    text-align: center;
-    position: absolute;
-    top: 125px;
-    right: 256px;
-  }
-}
 
-/* タブレットのレスポンシブデザイン */
-@media (max-width: 671px / min-width: 1000px){
-  body {
-    margin: 0;
-  }
-  
-  
   #btn {
     font-size: 18px;
     margin: 10px;
     border-radius: 8px;
     transition: 0.4s;
   }
-  
+
   .btnOn {
     background-color: #935e4b;
   }
-  
+
   .btnOff {
     background-color: darkgray;
   }
-  
-  #btn.btnHidden{
+
+  #btn.btnHidden {
     transform: translateY(50px);
     position: relative;
     z-index: -1;
   }
-  
+
   #game {
     background-color: #d9fa96;
-    display: flex;
+    position: relative;
     padding: 6px;
-    transition: 0.4s;
+    transition: 0.8s;
     z-index: 1;
   }
-  
+
   #game.hidden {
-    transform: translateY(-500px);
+    transform: translateY(-700px);
   }
-  
+
   .text {
-    width: auto;
+    z-index: 2;
+    width: 62%;
     flex: auto;
   }
-  
+
   #question {
     margin: 0;
     font-size: 14px;
   }
-  
+
   #inputBtn {
     font-size: 15px;
     margin: 2px;
     border-radius: 8px;
     background-color: burlywood;
   }
-  
+
   #inputAnswer {
     margin-top: 6px;
     width: 30px;
   }
-  
+
   #answer {
     letter-spacing: 0.15em;
     font-size: 20px;
     font-weight: bold;
   }
-  
+
   .textbox {
     display: flex;
   }
-  
+
   .hint {
+    width: 50%;
     margin: 0;
     padding: 2px auto auto 2px;
-    border: 1px solid black;
     flex: auto;
     border-radius: 8px;
   }
-  
+
+  #hintList {
+    position: relative;
+    padding: 0 0.5em;
+    margin-top: 2em;
+    list-style-type: none;
+    border: solid 2px #00796b;
+  }
+
+  #hintList::after {
+    position: absolute;
+    content: attr(title);
+    padding: 1px 7px;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    font-size: 0.8em;
+    background: #00796b;
+    color: #fff;
+    bottom: 100%;
+    left: -2px;
+    border-radius: 4px 4px 0px 0px;
+  }
+
+  #hintList li {
+    line-height: 1.5;
+    padding: 0.5em 0 0.5em 1.4em;
+    border-bottom: 1px dashed #4db6ac;
+  }
+
+  #hintList li::before {
+    position: absolute;
+    content: "\002713";
+    color: #00796b;
+    font-weight: bold;
+    left: 0.5em;
+  }
+
+  #hintList li:last-of-type {
+    border-bottom: none;
+  }
+
   .mistake {
-    width: 70px;
+    width: 26%;
     height: 300px;
     padding: 2px;
-    border: 1px solid black;
     border-radius: 8px;
   }
-  
-  .HangMan {
-    width: 250px;
-    height: 300px;
+
+  #mistakeList {
+    position: relative;
+    padding: 0 0.5em;
+    margin-top: 2em;
+    list-style-type: none;
+    border: solid 2px #00796b;
   }
-  
-  #result {
-    background-color: aqua;
-    width: 400px;
-    height: 300px;
-    text-align: center;
+
+  #mistakeList::after {
     position: absolute;
-    top: 125px;
-    right: 256px;
+    content: attr(title);
+    padding: 1px 7px;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    font-size: 0.8em;
+    background: #00796b;
+    color: #fff;
+    bottom: 100%;
+    left: -2px;
+    border-radius: 4px 4px 0px 0px;
+  }
+
+  #mistakeList li {
+    line-height: 1.5;
+    padding: 0.5em 0 0.5em 1.4em;
+    border-bottom: 1px dashed #4db6ac;
+  }
+
+  #mistakeList li::before {
+    position: absolute;
+    content: "\002713";
+    color: #00796b;
+    font-weight: bold;
+    left: 0.5em;
+  }
+
+  #mistakeList li:last-of-type {
+    border-bottom: none;
+  }
+
+  .resultAndHangMan {
+    z-index: -1;
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 70%;
+  }
+
+  .resultAndHangMan img {
+    width: 35%;
+    height: 120%;
+  }
+
+  #result {
+    z-index: 1;
+    transition: 0.8s;
+    background-color: aqua;
+    opacity: 0.8;
+    width: 65%;
+    height: 120%;
+    text-align: center;
+    /* position: absolute; */
+    top: 126px;
+  }
+
+  #result.resultHidden {
+    z-index: -1;
+    transform: translateX(-1500px);
   }
 }
 
 /* スマホのレスポンシブデザイン */
-@media (max-width: 670px){
+@media (max-width: 670px) {
   body {
     margin: 0;
+    font-family: sans-serif;
   }
-  
-  
+
   #btn {
-    font-size: 18px;
+    font-size: 14px;
     margin: 10px;
     border-radius: 8px;
     transition: 0.4s;
   }
-  
+
   .btnOn {
     background-color: #935e4b;
   }
-  
+
   .btnOff {
     background-color: darkgray;
   }
-  
-  #btn.btnHidden{
+
+  #btn.btnHidden {
     transform: translateY(50px);
     position: relative;
     z-index: -1;
   }
-  
+
   #game {
     background-color: #d9fa96;
-    display: flex;
+    position: relative;
     padding: 6px;
-    transition: 0.4s;
+    transition: 0.8s;
     z-index: 1;
   }
-  
+
   #game.hidden {
-    transform: translateY(-500px);
+    transform: translateY(-700px);
   }
-  
+
   .text {
-    width: auto;
+    z-index: 2;
+    width: 62%;
     flex: auto;
   }
-  
+
+  label {
+    font-size: 11px;
+  }
+
   #question {
     margin: 0;
-    font-size: 14px;
+    font-size: 11px;
   }
-  
+
   #inputBtn {
-    font-size: 15px;
+    font-size: 11px;
     margin: 2px;
     border-radius: 8px;
     background-color: burlywood;
   }
-  
+
   #inputAnswer {
     margin-top: 6px;
     width: 30px;
   }
-  
+  #caution {
+    font-size: 8px;
+  }
+
   #answer {
+    margin-bottom: 0;
     letter-spacing: 0.15em;
     font-size: 20px;
     font-weight: bold;
   }
-  
+
   .textbox {
     display: flex;
   }
-  
+
   .hint {
     margin: 0;
     padding: 2px auto auto 2px;
     flex: auto;
     border-radius: 8px;
   }
-  
-  #hintList{
+
+  #hintList {
     position: relative;
     padding: 0 0.5em;
     margin-top: 2em;
     list-style-type: none;
-    border: solid 2px #00796B;
+    border: solid 2px #00796b;
   }
-  
-  #hintList::after{
+
+  #hintList::after {
     position: absolute;
-    content:attr(title);
+    content: attr(title);
     padding: 1px 7px;
     letter-spacing: 0.05em;
     font-weight: bold;
-    font-size: .8em;
-    background: #00796B;
+    font-size: 0.8em;
+    background: #00796b;
     color: #fff;
     bottom: 100%;
     left: -2px;
     border-radius: 4px 4px 0px 0px;
   }
-  
-  #hintList li{
+
+  #hintList li {
+    font-size: 11px;
     line-height: 1.5;
     padding: 0.5em 0 0.5em 1.4em;
-    border-bottom: 1px dashed #4DB6AC;
+    border-bottom: 1px dashed #4db6ac;
   }
-  
+
   #hintList li::before {
     position: absolute;
     content: "\002713";
-    color: #00796B;
+    color: #00796b;
     font-weight: bold;
-    left : 0.5em;
+    left: 0.5em;
   }
-  
+
   #hintList li:last-of-type {
     border-bottom: none;
   }
-  
+
   .mistake {
     width: 70px;
     height: 300px;
     padding: 2px;
     border-radius: 8px;
   }
-  
-  #mistakeList{
+
+  #mistakeList {
     position: relative;
     padding: 0 0.5em;
     margin-top: 2em;
     list-style-type: none;
-    border: solid 2px #00796B;
+    border: solid 2px #00796b;
   }
-  
-  #mistakeList::after{
+
+  #mistakeList::after {
     position: absolute;
-    content:attr(title);
+    content: attr(title);
     padding: 1px 7px;
     letter-spacing: 0.05em;
     font-weight: bold;
-    font-size: .8em;
-    background: #00796B;
+    font-size: 0.8em;
+    background: #00796b;
     color: #fff;
     bottom: 100%;
     left: -2px;
     border-radius: 4px 4px 0px 0px;
   }
-  
-  #mistakeList li{
+
+  #mistakeList li {
+    font-size: 11px;
     line-height: 1.5;
     padding: 0.5em 0 0.5em 1.4em;
-    border-bottom: 1px dashed #4DB6AC;
+    border-bottom: 1px dashed #4db6ac;
   }
-  
+
   #mistakeList li::before {
     position: absolute;
     content: "\002713";
-    color: #00796B;
+    color: #00796b;
     font-weight: bold;
-    left : 0.5em;
+    left: 0.5em;
   }
-  
+
   #mistakeList li:last-of-type {
     border-bottom: none;
   }
-  .HangMan {
-    width: 250px;
-    height: 300px;
-  }
-  
-  /* #result {
-    background-color: aqua;
-    width: 400px;
-    height: 300px;
-    text-align: center;
+
+  .resultAndHangMan {
+    z-index: -1;
+    top: 0;
     position: absolute;
-    top: 125px;
-    right: 256px;
-  } */
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 70%;
+  }
+
+  .resultAndHangMan img {
+    width: 38%;
+  }
+
+  #result {
+    z-index: 1;
+    transition: 0.8s;
+    background-color: aqua;
+    opacity: 0.8;
+    width: 62%;
+    text-align: center;
+    /* position: absolute; */
+    top: 126px;
+  }
+
+  #result.resultHidden {
+    z-index: -1;
+    transform: translateX(-500px);
+  }
 }
-
-
-
-

@@ -1,5 +1,5 @@
-/* PCのレスポンシブデザイン */
-@media (min-width: 1001px){
+/* PCとタブレットのレスポンシブデザイン */
+@media (min-width: 671px){
   body {
     margin: 0;
   }
@@ -35,7 +35,7 @@
   }
   
   #game.hidden {
-    transform: translateY(-500px);
+    transform: translateY(-600px);
   }
   
   .text {
@@ -86,111 +86,7 @@
     border-radius: 8px;
   }
   
-  .HangMan {
-    width: 250px;
-    height: 300px;
-  }
-  
-  #result {
-    background-color: aqua;
-    width: 400px;
-    height: 300px;
-    text-align: center;
-    position: absolute;
-    top: 125px;
-    right: 256px;
-  }
-}
-
-/* タブレットのレスポンシブデザイン */
-@media (max-width: 671px / min-width: 1000px){
-  body {
-    margin: 0;
-  }
-  
-  
-  #btn {
-    font-size: 18px;
-    margin: 10px;
-    border-radius: 8px;
-    transition: 0.4s;
-  }
-  
-  .btnOn {
-    background-color: #935e4b;
-  }
-  
-  .btnOff {
-    background-color: darkgray;
-  }
-  
-  #btn.btnHidden{
-    transform: translateY(50px);
-    position: relative;
-    z-index: -1;
-  }
-  
-  #game {
-    background-color: #d9fa96;
-    display: flex;
-    padding: 6px;
-    transition: 0.4s;
-    z-index: 1;
-  }
-  
-  #game.hidden {
-    transform: translateY(-500px);
-  }
-  
-  .text {
-    width: auto;
-    flex: auto;
-  }
-  
-  #question {
-    margin: 0;
-    font-size: 14px;
-  }
-  
-  #inputBtn {
-    font-size: 15px;
-    margin: 2px;
-    border-radius: 8px;
-    background-color: burlywood;
-  }
-  
-  #inputAnswer {
-    margin-top: 6px;
-    width: 30px;
-  }
-  
-  #answer {
-    letter-spacing: 0.15em;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .textbox {
-    display: flex;
-  }
-  
-  .hint {
-    margin: 0;
-    padding: 2px auto auto 2px;
-    border: 1px solid black;
-    flex: auto;
-    border-radius: 8px;
-  }
-  
-  .mistake {
-    width: 70px;
-    height: 300px;
-    padding: 2px;
-    border: 1px solid black;
-    border-radius: 8px;
-  }
-  
-  .HangMan {
+  .resultAndHangMan {
     width: 250px;
     height: 300px;
   }
@@ -236,9 +132,9 @@
   
   #game {
     background-color: #d9fa96;
-    display: flex;
+    position: relative;
     padding: 6px;
-    transition: 0.4s;
+    transition: 0.8s;
     z-index: 1;
   }
   
@@ -247,7 +143,8 @@
   }
   
   .text {
-    width: auto;
+    z-index: 2;
+    width: 62%;
     flex: auto;
   }
   
@@ -371,20 +268,36 @@
   #mistakeList li:last-of-type {
     border-bottom: none;
   }
-  .HangMan {
-    width: 250px;
-    height: 300px;
+
+  .resultAndHangMan {
+    z-index: -1;
+    top: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 70%;
   }
   
-  /* #result {
+  .resultAndHangMan img {
+    width: 38%;
+  }
+  
+  #result {
+    z-index: 1;
+    transition: 0.8s;
     background-color: aqua;
-    width: 400px;
-    height: 300px;
+    opacity: 0.8;
+    width: 62%;
     text-align: center;
-    position: absolute;
-    top: 125px;
-    right: 256px;
-  } */
+    /* position: absolute; */
+    top: 126px;
+  }
+  
+  #result.resultHidden {
+    z-index: -1;
+    transform: translateX(-500px);
+  }
 }
 
 
